@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 全局重置和字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* 卡片容器 */
+        .card {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 48px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* 头像 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+            color: white;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        /* 标题和文字 */
+        h1 {
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            padding: 0 8px;
+        }
+
+        /* 社交链接按钮 */
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .links a:hover {
+            background: white;
+            color: #1a1a2e;
+            border-color: #1a1a2e;
+            transform: scale(1.05);
+        }
+
+        /* 针对不同社交平台的颜色（可选） */
+        .links a.github:hover { border-color: #333; color: #333; }
+        .links a.email:hover { border-color: #667eea; color: #667eea; }
+
+        /* 底部版权 */
+        .footer {
+            margin-top: 32px;
+            font-size: 14px;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 24px;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 480px) {
+            .card {
+                padding: 32px 20px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .links a {
+                padding: 8px 20px;
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 头像区：把 👤 换成你喜欢的 Emoji 或文字 -->
+        <div class="avatar">👤</div>
+
+        <!-- 标题和描述 -->
+        <h1>你好，我是小张</h1>
+        <p class="subtitle">✨ 正在学习搭建个人网站</p>
+        <p class="bio">
+            这是我在 GitHub Pages 上的第一个静态页面。<br>
+            用 HTML + CSS 写了一个简洁好看的卡片布局。<br>
+            未来会在这里分享学习笔记和生活感悟。
+        </p>
+
+        <!-- 链接按钮 -->
+        <div class="links">
+            <a href="#" class="github">🐙 GitHub</a>
+            <a href="#" class="email">✉️ 邮箱</a>
+            <a href="#">📝 博客</a>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            © 2026 小张 · 用 ❤️ 和 HTML 构建
+        </div>
+    </div>
+</body>
+</html>
